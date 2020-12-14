@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="mainblock">
+        <h1>Insurance Price Predictor</h1>
+        <br><br><br>
+        <form action="/pred" method="POST">
+            <p>Gender:
+                <input type="radio" id="male" name="gender" value=1>
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value=0>
+                <label for="female">Female</label>
+            </p>
+
+            <p>Smoker:
+                <input type="radio" id="smoker" name="smoker" value=1>
+                <label for="male">Yes</label>
+                <input type="radio" id="nonsmoker" name="smoker" value=0>
+                <label for="female">No</label>
+            </p>
+
+            <p>Region:
+                <input type="radio" id="ne" name="region" value='ne'>
+                <label for="ne">NorthEast</label>
+                <input type="radio" id="nw" name="region" value='nw'>
+                <label for="nw">NorthWest</label>
+                <input type="radio" id="se" name="region" value='se'>
+                <label for="se">SouthEast</label>
+                <input type="radio" id="sw" name="region" value='sw'>
+                <label for="sw">SouthWest</label>
+            </p>
+
+            <p>Age: <input type="number" id="age" name="age"></p>
+            <p>BMI: <input type="number" id="bmi" name="bmi"></p>
+            <br>
+            <input type="submit" value="Predict" id="predict">
+
+        </form>
+        <br><hr><br><br>
+        <p id=result>{{res}}</p>
+    </div>
+</body>
+
+</html>
